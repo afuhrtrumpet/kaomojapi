@@ -13,4 +13,5 @@ class Emoticon(models.Model):
     content = models.CharField(max_length=50)
     name = models.CharField(max_length=100)
     category = models.ForeignKey(Category)
-    subcategry = models.ForeignKey(SubCategory)
+    subcategory = models.ForeignKey(SubCategory, null=True)
+    index = models.IntegerField(null=True)
